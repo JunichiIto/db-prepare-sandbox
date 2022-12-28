@@ -1,7 +1,7 @@
 # db-prepare-sandbox
 
 ```
-git clone (this repositry)
+git clone https://github.com/JunichiIto/db-prepare-sandbox.git
 cd db-prepare-sandbox 
 bin/setup 
 rails test

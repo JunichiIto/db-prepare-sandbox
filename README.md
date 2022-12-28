@@ -1,24 +1,31 @@
-# README
+# db-prepare-sandbox
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+git clone (this repositry)
+cd db-prepare-sandbox 
+bin/setup 
+rails test
+```
 
-Things you may want to cover:
+will display:
 
-* Ruby version
+``` 
+rails aborted!
+ActiveRecord::EnvironmentMismatchError: You are attempting to modify a database that was last run in `development` environment.
+You are running in `test` environment. If you are sure you want to continue, first set the environment using:
 
-* System dependencies
+        bin/rails db:environment:set RAILS_ENV=test
 
-* Configuration
 
-* Database creation
+Tasks: TOP => db:test:load => db:test:purge => db:check_protected_environments
+(See full trace by running task with --trace)
+Running 0 tests in a single process (parallelization threshold is 50)
+Run options: --seed 54729
 
-* Database initialization
+# Running:
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
+Finished in 0.000382s, 0.0000 runs/s, 0.0000 assertions/s.
+0 runs, 0 assertions, 0 failures, 0 errors, 0 skips
+```
